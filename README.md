@@ -1,12 +1,11 @@
-Here’s the updated README file with a new section added for **Team Details** to showcase your team and their roles:
 
 ---
 
-# **InboxGuardian**
+# **InBoxGuardian**
 
 ### **Protect Your Focus, Prioritize Your Day**
 
-InboxGuardian is an AI-powered notification management app that helps you stay productive by prioritizing your notifications, enabling distraction-free Do Not Disturb (DND) modes, and syncing seamlessly across devices. Whether you're working, studying, or just need a break from interruptions, InboxGuardian ensures you only see what's important.
+InBoxGuardian is an AI-powered notification management app that helps you stay productive by prioritizing your notifications, enabling distraction-free Do Not Disturb (DND) modes, and syncing seamlessly across devices. Whether you're working, studying, or just need a break from interruptions, InboxGuardian ensures you only see what's important.
 
 ---
 
