@@ -164,8 +164,8 @@ We welcome contributions to enhance InboxGuardian! Here's how you can contribute
 
 ---
 
-## **License**
-This project is licensed under the MIT License. See `LICENSE.md` for details.
+## License
+The source code for **InboxGuardian** is licensed under the Proprietary License. See [LICENSE_PROPRIETARY.txt](LICENSE_PROPRIETARY.txt) for details.
 
 ---
 
