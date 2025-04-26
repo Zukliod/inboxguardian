@@ -2,7 +2,7 @@
 
 ### **Protect Your Focus, Prioritize Your Day**
 
-InboxGuardian is an AI-powered notification management app that helps you stay productive by prioritizing your notifications, enabling distraction-free Do Not Disturb (DND) modes, and syncing seamlessly across devices. Whether you're working, studying, or just need a break from interruptions, InboxGuardian ensures you only see what's important.
+InBoxGuardian is an AI-powered notification management app that helps you stay productive by prioritizing your notifications, enabling distraction-free Do Not Disturb (DND) modes, and syncing seamlessly across devices. Whether you're working, studying, or just need a break from interruptions, InboxGuardian ensures you only see what's important.
 
 ---
 
@@ -161,8 +161,8 @@ We welcome contributions to enhance InboxGuardian! Here's how you can contribute
 
 ---
 
-## **License**
-This project is licensed under the MIT License. See `LICENSE.md` for details.
+## License
+The source code for **InboxGuardian** is licensed under the Proprietary License. See [LICENSE_PROPRIETARY.txt](LICENSE_PROPRIETARY.txt) for details.
 
 ---
 
