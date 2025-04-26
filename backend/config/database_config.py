@@ -1,19 +1,19 @@
-DATABASE = {
-    "host": "localhost",         # Database host (localhost if on your own machine)
-    "port": "5432",              # Default PostgreSQL port
-    "user": "harshit",     # Replace with your PostgreSQL username
-    "password": "Zukliod2.0", # Replace with your PostgreSQL password
-    "dbname": "inboxguardian"    # Database name you created earlier
-}
+import os
 import psycopg2
+from urllib.parse import urlparse
 
 def get_db_connection():
-    db_config = DATABASE
+    # Use DATABASE_URL from environment variables
+    database_url = os.getenv("DATABASE_URL")
+    if not database_url:
+        raise ValueError("DATABASE_URL is not set in the environment variables.")
+    
+    result = urlparse(database_url)
     connection = psycopg2.connect(
-        host=db_config["host"],
-        port=db_config["port"],
-        user=db_config["user"],
-        password=db_config["password"],
-        dbname=db_config["dbname"]
+        host=result.hostname,
+        port=result.port,
+        user=result.username,
+        password=result.password,
+        dbname=result.path[1:]  # Remove leading '/'
     )
     return connection

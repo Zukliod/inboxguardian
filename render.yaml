@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: inboxguardian-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.run:app
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://harshit:tWv50MSjul8cyyN0RmspiJYeqDguoDIC@dpg-d06i4mruibrs73ekeiq0-a.singapore-postgres.render.com/inboxguardian  # Replace with your Render database URL
+      - key: FLASK_DEBUG
+        value: false

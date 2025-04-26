@@ -1,23 +1,17 @@
 from transformers import pipeline
+import os
 
-# Load the text classification model
+# Set Hugging Face cache directory
+os.environ["TRANSFORMERS_CACHE"] = os.getenv("TRANSFORMERS_CACHE", "./cache")
+
 classifier = pipeline("text-classification", model="distilbert-base-uncased")
 
 def prioritize_notification(content):
-    """
-    Predict the priority of a notification based on its content.
-    """
-    result = classifier(content)  # Get model prediction
-    label = result[0]["label"]    # Extract the predicted label
-
-    # Map model labels to priority levels
-    if label == "LABEL_0":  # Example: Assume LABEL_0 = "low priority"
+    result = classifier(content)
+    label = result[0]["label"]
+    if label == "LABEL_0":
         return "low"
-    elif label == "LABEL_1":  # Example: Assume LABEL_1 = "medium priority"
+    elif label == "LABEL_1":
         return "medium"
     else:
-        return "high"  # Default to "high" for other cases
-if __name__ == "__main__":
-    test_content = "Urgent meeting with the team at 3 PM"
-    priority = prioritize_notification(test_content)
-    print(f"Predicted priority: {priority}")
+        return "high"
