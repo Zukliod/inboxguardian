@@ -1,6 +1,13 @@
-from app import create_app
+import os
+from flask import Flask
 
-app = create_app()
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Welcome to InboxGuardian!"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Use Railway's dynamic port assignment
+    port = int(os.environ.get("PORT", 8080))  # Default to 8080 if PORT is not set
+    app.run(host="0.0.0.0", port=port)
