@@ -1,1 +1,1 @@
-web: python backend/run.py
+web: gunicorn --bind 0.0.0.0:$PORT backend.run:app
