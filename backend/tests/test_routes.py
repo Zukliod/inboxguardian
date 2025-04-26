@@ -46,3 +46,11 @@ def test_delete_notification(client):
     response = client.delete('/notifications/1')
     assert response.status_code == 200
     assert response.json["message"] == "Notification deleted successfully!"
+
+def test_prioritize(client):
+    response = client.post('/prioritize', json={
+        "content": "Urgent meeting with the team at 3 PM"
+    })
+    print(response.json)  # Debugging: Print the response JSON
+    assert response.status_code == 200
+    assert response.json["priority"] in ["high", "medium", "low"]

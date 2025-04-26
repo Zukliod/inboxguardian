@@ -151,3 +151,24 @@ def delete_notification(id):
     except Exception as e:
         print("Error in DELETE /notifications/<id>:", e)  # Debugging log
         return jsonify({"error": str(e)}), 500
+
+# --- Prioritize: Prioritize notification content ---
+@main.route('/prioritize', methods=['POST'])
+def prioritize():
+    try:
+        # Parse the JSON payload
+        data = request.json
+        content = data.get("content")
+
+        # Validate input
+        if not content:
+            return jsonify({"error": "Content is required"}), 400
+
+        # Use the AI prioritization function
+        priority = prioritize_notification(content)
+
+        # Return the result
+        return jsonify({"content": content, "priority": priority}), 200
+    except Exception as e:
+        print("Error in POST /prioritize:", e)  # Debugging log
+        return jsonify({"error": str(e)}), 500
