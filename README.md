@@ -1,7 +1,3 @@
-Here’s the updated README file with a new section added for **Team Details** to showcase your team and their roles:
-
----
-
 # **InboxGuardian**
 
 ### **Protect Your Focus, Prioritize Your Day**
@@ -174,5 +170,3 @@ This project is licensed under the MIT License. See `LICENSE.md` for details.
 - **Name**: Harshit
 - **Email**: [rarchit101@gmail.com](mailto:your-email@example.com)
 - **GitHub**: [https://github.com/Zukliod](https://github.com/Zukliod)
-
-Let me know if you need help customizing further or refining any section! 🚀

@@ -1,0 +1,34 @@
+# Flask and related extensions
+Flask                     # Core framework
+Flask-JWT-Extended        # JWT authentication
+Flask-SQLAlchemy          # SQLAlchemy integration for Flask
+Flask-Migrate             # Database migrations
+Flask-Cors                # Cross-Origin Resource Sharing
+Flask-Testing             # Testing utilities for Flask
+flask-socketio            # WebSocket support for real-time communication
+
+# Database
+SQLAlchemy                # ORM for database interactions
+psycopg2-binary           # PostgreSQL database adapter
+
+# Environment and configuration
+python-dotenv             # Load environment variables from .env files
+
+# Firebase
+firebase-admin            # Firebase Admin SDK for notifications and authentication
+
+# HTTP requests
+requests                  # HTTP requests library
+
+# Production server
+gunicorn                  # WSGI HTTP server for production
+
+# AI and NLP (if applicable)
+transformers              # Hugging Face Transformers for NLP models
+torch                     # PyTorch for deep learning
+scikit-learn              # Machine learning utilities
+nltk                      # Natural Language Toolkit for text processing
+
+# Testing
+pytest                    # Testing framework
+pytest-cov                # Test coverage reporting
