@@ -21,11 +21,17 @@ app.register_blueprint(main)
 
 @app.route("/")
 def serve_frontend():
-    return send_from_directory(app.static_folder, "index.html")
+    if os.path.exists(os.path.join(app.static_folder, "index.html")):
+        return send_from_directory(app.static_folder, "index.html")
+    else:
+        return "Frontend is not built yet. Please build the frontend and place it in the 'frontend/build' directory.", 200
 
 @app.errorhandler(404)
 def not_found(e):
-    return send_from_directory(app.static_folder, "index.html")
+    if os.path.exists(os.path.join(app.static_folder, "index.html")):
+        return send_from_directory(app.static_folder, "index.html")
+    else:
+        return "Page not found, and the frontend is not built yet.", 404
 
 # Example model (replace with your actual models)
 class User(db.Model):
