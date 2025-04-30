@@ -19,12 +19,26 @@ migrate = Migrate(app, db)
 # Register routes
 app.register_blueprint(main)
 
+# Handle favicon requests
+@app.route('/favicon.ico')
+def favicon():
+    favicon_path = os.path.join(app.static_folder, "favicon.ico")
+    if os.path.exists(favicon_path):
+        return send_from_directory(app.static_folder, "favicon.ico")
+    else:
+        return "Favicon not found", 404
+
 @app.route("/")
 def serve_frontend():
     if os.path.exists(os.path.join(app.static_folder, "index.html")):
         return send_from_directory(app.static_folder, "index.html")
     else:
         return "Frontend is not built yet. Please build the frontend and place it in the 'frontend/build' directory.", 200
+
+# Handle HEAD requests for "/"
+@app.route("/", methods=["HEAD"])
+def head_root():
+    return "", 200
 
 @app.errorhandler(404)
 def not_found(e):
